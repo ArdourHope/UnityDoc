@@ -18,13 +18,15 @@ public KeyCode JumpKey = KeyCode.Space; //bind Jump movement with space button
 
 public float speed = 2; //movement speed
 public float MaxJump = 10; //Jump Range
-public bool MouseLookActive;
+public bool MouseLookActive; //Mousemovement
 
 Vector3 MoveDirection; // Vector use as direction of movement
 CharacterController myController;
 bool isJump;
 
 // Init
+// you could put start condition or function called only on start of the game
+
 void Start()
 {
 
@@ -86,6 +88,9 @@ void Update()
             isJump = false; 
         }
     }
+
+
+    //Action
 
     ChangeHeadingByMouse();
     MoveDirection = transform.TransformDirection(MoveDirection);
