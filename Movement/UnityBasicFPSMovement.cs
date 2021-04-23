@@ -16,11 +16,11 @@ public KeyCode JumpKey = KeyCode.Space; //bind Jump movement with space button
 
 // Variable
 
-public float speed = 2;
-public float MaxJump = 5;
+public float speed = 2; //movement speed
+public float MaxJump = 10; //Jump Range
 public bool MouseLookActive;
 
-Vector3 MoveDirection;
+Vector3 MoveDirection; // Vector use as direction of movement
 CharacterController myController;
 bool isJump;
 
@@ -40,6 +40,8 @@ void Update()
     // Movement input 
 
     //If the key pressed. movedirection will be change with vector direction multiply with speed
+    
+    //NOTES
     //if the speed is 2 then the movement will be 2 unit/frame
     //if the game runs on 60 fps then the character moving with speed 120 unit/second
 
